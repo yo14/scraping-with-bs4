@@ -25,7 +25,7 @@ def detik_popular():
 def idr_rates():
     source = requests.get('http://www.floatrates.com/daily/idr.json')
     json_data = source.json()
-    return render_template('idr-rates.html', datas=json_data)
+    return render_template('idr-rates.html', datas=json_data.values())
 
 
 if __name__=='__main__':

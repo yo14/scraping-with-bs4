@@ -5,17 +5,21 @@
   <table class="table">
     <thead class="thead-dark">
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Rate</th>
       </tr>
     </thead>
     <tbody>
+      {% for data in datas %}
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td>{{ data['code']|safe }}</td>
+        <td>{{ data['name'] }}</td>
+        <td>{{ data['date'] }}</td>
+        <td>{{ data['inverseRate'] }}</td>
       </tr>
+      {% endfor %}
     </tbody>
   </table>
 
